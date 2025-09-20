@@ -22,6 +22,11 @@ func GenerateSuggestions(stats []store.CommandStat, now time.Time) []Suggestion 
 		if alias == "" || len(alias) >= len(s.Command) {
 			continue
 		}
+
+		if isDangerous(s.Command) {
+			continue
+		}
+
 		rec := recencyWeight(now.Sub(s.LastUsed))
 		saved := float64(len(s.Command) - len(alias))
 		score := 0.6*float64(s.Uses) + 0.3*saved + 0.1*rec
