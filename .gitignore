@@ -1,0 +1,53 @@
+# ---- Go build / binaries ----
+bin/
+dist/
+build/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Arquivos de teste
+*.test
+coverage.out
+*.coverprofile
+*.out
+
+# Cache Go
+*.log
+*.prof
+*.pprof
+*.trace
+
+# ---- IDE / Editor configs ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---- OS / Misc ----
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ---- Local / Tooling ----
+# goreleaser / nfpm
+.release/
+*.tar.gz
+*.zip
+*.deb
+*.rpm
+
+# configs locais não versionadas
+*.local.yaml
+*.local.json
+
+# ---- Aliasgen runtime dirs ----
+# Banco de dados e aliases do usuário
+*.db
+.cache/
+*.sqlite
+*.sqlite3
